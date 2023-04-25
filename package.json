@@ -1,5 +1,5 @@
 {
-  "name": "template-vite-html",
+  "name": "buscador-cep",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -17,6 +17,7 @@
     "eslint-plugin-import": "^2.27.5"
   },
   "dependencies": {
+    "sweetalert2": "^11.7.3",
     "vite": "^4.3.2"
   }
 }
