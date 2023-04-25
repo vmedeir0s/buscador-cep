@@ -27,9 +27,13 @@ btnEl.addEventListener('click', async () => {
   try {
     const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
     const data = await result.json();
+    if (data.erro) {
+      throw new Error('CEP Inválido');
+    }
     preEl.innerHTML = JSON.stringify(data, undefined, 1);
     return data;
   } catch (error) {
+    inputEl.value = '';
     Swal.fire({
       icon: 'error',
       text: error.message,
