@@ -71,6 +71,9 @@ footer a:hover {
 }
 
 @media screen and (max-width: 395px) {
+  h1 {
+    font-size: 27px;
+  }
   main {
     height: 65vh;
     width: 90vw;
