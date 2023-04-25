@@ -9,3 +9,8 @@ Esta é uma simples aplicação desenvolvida no módulo de Front-end da Trybe. O
 - Vite
 - Consumo de API [ViaCEP](https://viacep.com.br/)
 - SweetAlert 2
+
+## Demonstração
+Acessar: [*Clique Aqui*](https://vmedeiros-buscador-cep.vercel.app/)
+
+![](/src/images/desktop_demo.png)
