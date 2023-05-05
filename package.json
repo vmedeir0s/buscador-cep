@@ -1,23 +1,27 @@
 {
-  "name": "buscador-cep",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite --open"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "eslint": "^8.39.0",
-    "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.27.5"
-  },
-  "dependencies": {
-    "sweetalert2": "^11.7.3",
-    "vite": "^4.3.2"
-  }
+	"name": "buscador-cep",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "NODE_OPTIONS=--experimental-vm-modules npx jest",
+		"dev": "vite --open"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"devDependencies": {
+		"eslint": "^8.39.0",
+		"eslint-config-airbnb-base": "^15.0.0",
+		"eslint-plugin-import": "^2.27.5",
+		"eslint-plugin-jest": "^27.2.1",
+		"eslint-plugin-jest-dom": "^4.0.3",
+		"jest": "^29.5.0"
+	},
+	"dependencies": {
+		"node-fetch": "^3.3.1",
+		"sweetalert2": "^11.7.3",
+		"vite": "^4.3.2"
+	}
 }
