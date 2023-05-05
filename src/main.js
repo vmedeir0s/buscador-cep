@@ -1,5 +1,6 @@
-import './style.css';
 import Swal from 'sweetalert2';
+import getAddressFromCep from './getAddressFromCep';
+import './style.css';
 
 const inputEl = document.querySelector('input');
 const btnEl = document.querySelector('button');
@@ -16,22 +17,10 @@ inputEl.addEventListener('keypress', () => {
 btnEl.addEventListener('click', async () => {
   const cep = inputEl.value;
 
-  if (cep.length === 0) {
-    Swal.fire({
-      icon: 'error',
-      text: 'Digite um CEP',
-    });
-    return null;
-  }
-
   try {
-    const result = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
-    const data = await result.json();
-    if (data.erro) {
-      throw new Error('CEP Inválido');
-    }
-    preEl.innerHTML = JSON.stringify(data, undefined, 1);
-    return data;
+    const addressData = await getAddressFromCep(cep);
+    preEl.innerHTML = JSON.stringify(addressData, undefined, 1);
+    return null;
   } catch (error) {
     inputEl.value = '';
     Swal.fire({
